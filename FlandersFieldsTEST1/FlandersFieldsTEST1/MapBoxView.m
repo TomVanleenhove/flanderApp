@@ -16,6 +16,7 @@
     if (self) {
         // Initialization code
         
+        
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hjogkfe8"];
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.854656, 2.887257) zoomLevel:2 maxZoomLevel:15 minZoomLevel:4 backgroundImage:nil];
         [self addSubview:self.mapView];

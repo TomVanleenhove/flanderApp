@@ -16,6 +16,12 @@
     if (self) {
         // Initialization code
         
+        
+        UIImage *image = [UIImage imageNamed:@"interface"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        self.frame = CGRectMake(0,0,512,768);
+        [self addSubview:imageView];
+        
     }
     return self;
 }

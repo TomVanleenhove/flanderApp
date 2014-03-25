@@ -1,18 +1,14 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
       "idiom" : "ipad",
       "scale" : "1x",
-      "filename" : "startscherm-1.png"
+      "filename" : "startscherm.png"
     },
     {
       "idiom" : "ipad",
       "scale" : "2x",
-      "filename" : "startscherm.png"
+      "filename" : "startscherm@2x.png"
     }
   ],
   "info" : {

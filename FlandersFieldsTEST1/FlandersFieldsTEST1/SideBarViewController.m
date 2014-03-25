@@ -20,8 +20,7 @@
     if (self) {
         // Custom initialization
         
-        NSLog(@"ok");
-        self.view.backgroundColor = [UIColor blackColor];
+        self.view.opaque = NO;
         
     }
     return self;

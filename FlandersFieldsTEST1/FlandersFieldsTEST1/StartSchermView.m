@@ -15,7 +15,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor blueColor];
         
         
         UIImage *image = [UIImage imageNamed:@"startscherm"];
@@ -24,15 +23,13 @@
         [self addSubview:imageView];
         
         
-        self.btnStart = [UIButton buttonWithType:UIButtonTypeSystem];
-        [self.btnStart setTitle:@"Start" forState:UIControlStateNormal];
-        self.btnStart.frame = CGRectMake(0, 0, 200, 30);
-        self.btnStart.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height - (100));
-        [self addSubview:self.btnStart];
-        [self.btnStart addTarget:self action:@selector(startKnopTapped:) forControlEvents:UIControlEventTouchUpInside];
+        UIButton *start = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *startBtn = [UIImage imageNamed:@"startBtn"];
+        [start setBackgroundImage:startBtn forState:normal];
+        [self addSubview:start];
+        [start setFrame:CGRectMake((self.frame.size.width - startBtn.size.width) / 2, ((self.frame.size.height - startBtn.size.height) / 2) + 180, startBtn.size.width, startBtn.size.height)];
         
-        
-        
+        [start addTarget:self action:@selector(startKnopTapped:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return self;
@@ -44,13 +41,17 @@
     NSLog(@"[startschermview] start being tapped");
     
     
+    self.alpha = 1;
+    [UIView beginAnimations:@"fade in" context:nil];
+    [UIView setAnimationDuration:0.9];
+    self.alpha = 0;
+    [UIView commitAnimations];
+    
     MapBoxViewController *mapBoxVC = [[MapBoxViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = mapBoxVC;
     
+    
 }
-
-
-
 
 
 /*

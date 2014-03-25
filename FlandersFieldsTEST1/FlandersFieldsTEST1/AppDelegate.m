@@ -16,15 +16,8 @@
     // Override point for customization after application launch.
     
     
-    
     StartschermViewController *startSchermVC = [[StartschermViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = startSchermVC;
-    
-    
-    
-    
-
-    
     
     
     self.window.backgroundColor = [UIColor whiteColor];

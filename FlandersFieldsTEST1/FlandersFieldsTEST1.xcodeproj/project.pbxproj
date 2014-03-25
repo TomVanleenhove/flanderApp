@@ -121,10 +121,10 @@
 		83DED83118E21BE4008B88D4 /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
-				83945BC418E1CCBC00C0837E /* SideBarView.h */,
-				83945BC518E1CCBC00C0837E /* SideBarView.m */,
 				83945BC718E1CCC900C0837E /* SideBarViewController.h */,
 				83945BC818E1CCC900C0837E /* SideBarViewController.m */,
+				83945BC418E1CCBC00C0837E /* SideBarView.h */,
+				83945BC518E1CCBC00C0837E /* SideBarView.m */,
 			);
 			name = SideBar;
 			sourceTree = "<group>";
