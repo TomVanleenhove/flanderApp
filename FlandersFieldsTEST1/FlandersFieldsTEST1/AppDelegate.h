@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MapBoxViewController.h"
-#import "SideBarViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

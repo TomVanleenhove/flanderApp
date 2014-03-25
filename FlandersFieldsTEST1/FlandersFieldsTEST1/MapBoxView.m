@@ -44,6 +44,8 @@
     NSLog(@"[mapboxview] sidebar being tapped");
     
     [self.mapView removeFromSuperview];
+    SideBarViewController *sideBarVC = [[SideBarViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = sideBarVC;
     
 }
 

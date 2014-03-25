@@ -15,6 +15,9 @@
 #import "SideBarDelegate.h"
 #import "SideBarView.h"
 
+#import "SideBarViewController.h"
+
+
 @interface MapBoxView : UIView
 
 @property (strong, nonatomic) RMMapView *mapView;

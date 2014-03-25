@@ -16,8 +16,6 @@
     // Override point for customization after application launch.
     
     MapBoxViewController *mapBoxVC = [[MapBoxViewController alloc] initWithNibName:nil bundle:nil];
-    SideBarViewController *sideBarVC = [[SideBarViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = sideBarVC;
     self.window.rootViewController = mapBoxVC;
 
     
