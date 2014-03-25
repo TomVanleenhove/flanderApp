@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MapBoxView.h"
-
 @interface MapBoxViewController : UIViewController
 @property(nonatomic) CGRect bounds;
 

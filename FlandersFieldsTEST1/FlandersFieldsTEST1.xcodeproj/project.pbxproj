@@ -12,6 +12,8 @@
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
 		83945BC918E1CCC900C0837E /* SideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC818E1CCC900C0837E /* SideBarViewController.m */; };
+		83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82A18E21BA3008B88D4 /* StartschermViewController.m */; };
+		83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82D18E21BBF008B88D4 /* StartSchermView.m */; };
 		83F7ED8C18E1B8D900D8A069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8B18E1B8D900D8A069 /* Foundation.framework */; };
 		83F7ED8E18E1B8D900D8A069 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */; };
 		83F7ED9018E1B8D900D8A069 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8F18E1B8D900D8A069 /* UIKit.framework */; };
@@ -47,7 +49,10 @@
 		83945BC518E1CCBC00C0837E /* SideBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarView.m; sourceTree = "<group>"; };
 		83945BC718E1CCC900C0837E /* SideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarViewController.h; sourceTree = "<group>"; };
 		83945BC818E1CCC900C0837E /* SideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarViewController.m; sourceTree = "<group>"; };
-		83945BCD18E1CE9600C0837E /* SideBarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideBarDelegate.h; sourceTree = "<group>"; };
+		83DED82918E21BA3008B88D4 /* StartschermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartschermViewController.h; sourceTree = "<group>"; };
+		83DED82A18E21BA3008B88D4 /* StartschermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartschermViewController.m; sourceTree = "<group>"; };
+		83DED82C18E21BBF008B88D4 /* StartSchermView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartSchermView.h; sourceTree = "<group>"; };
+		83DED82D18E21BBF008B88D4 /* StartSchermView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartSchermView.m; sourceTree = "<group>"; };
 		83F7ED8818E1B8D900D8A069 /* FlandersFieldsTEST1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlandersFieldsTEST1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F7ED8B18E1B8D900D8A069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +96,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83DED82F18E21BC5008B88D4 /* start */ = {
+			isa = PBXGroup;
+			children = (
+				83DED82918E21BA3008B88D4 /* StartschermViewController.h */,
+				83DED82A18E21BA3008B88D4 /* StartschermViewController.m */,
+				83DED82C18E21BBF008B88D4 /* StartSchermView.h */,
+				83DED82D18E21BBF008B88D4 /* StartSchermView.m */,
+			);
+			name = start;
+			sourceTree = "<group>";
+		};
+		83DED83018E21BD4008B88D4 /* Mapbox */ = {
+			isa = PBXGroup;
+			children = (
+				83945BBE18E1BAE600C0837E /* MapBoxViewController.h */,
+				83945BBF18E1BAE600C0837E /* MapBoxViewController.m */,
+				83945BC118E1BAFB00C0837E /* MapBoxView.h */,
+				83945BC218E1BAFB00C0837E /* MapBoxView.m */,
+			);
+			name = Mapbox;
+			sourceTree = "<group>";
+		};
+		83DED83118E21BE4008B88D4 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				83945BC418E1CCBC00C0837E /* SideBarView.h */,
+				83945BC518E1CCBC00C0837E /* SideBarView.m */,
+				83945BC718E1CCC900C0837E /* SideBarViewController.h */,
+				83945BC818E1CCC900C0837E /* SideBarViewController.m */,
+			);
+			name = SideBar;
+			sourceTree = "<group>";
+		};
 		83F7ED7F18E1B8D900D8A069 = {
 			isa = PBXGroup;
 			children = (
@@ -130,15 +168,9 @@
 				83F7ED9B18E1B8D900D8A069 /* AppDelegate.m */,
 				83F7ED9D18E1B8D900D8A069 /* Images.xcassets */,
 				83F7ED9218E1B8D900D8A069 /* Supporting Files */,
-				83945BBE18E1BAE600C0837E /* MapBoxViewController.h */,
-				83945BBF18E1BAE600C0837E /* MapBoxViewController.m */,
-				83945BC118E1BAFB00C0837E /* MapBoxView.h */,
-				83945BC218E1BAFB00C0837E /* MapBoxView.m */,
-				83945BC418E1CCBC00C0837E /* SideBarView.h */,
-				83945BC518E1CCBC00C0837E /* SideBarView.m */,
-				83945BC718E1CCC900C0837E /* SideBarViewController.h */,
-				83945BC818E1CCC900C0837E /* SideBarViewController.m */,
-				83945BCD18E1CE9600C0837E /* SideBarDelegate.h */,
+				83DED82F18E21BC5008B88D4 /* start */,
+				83DED83018E21BD4008B88D4 /* Mapbox */,
+				83DED83118E21BE4008B88D4 /* SideBar */,
 			);
 			path = FlandersFieldsTEST1;
 			sourceTree = "<group>";
@@ -310,7 +342,9 @@
 				83F7ED9C18E1B8D900D8A069 /* AppDelegate.m in Sources */,
 				83945BC918E1CCC900C0837E /* SideBarViewController.m in Sources */,
 				83F7ED9818E1B8D900D8A069 /* main.m in Sources */,
+				83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */,
 				83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */,
+				83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

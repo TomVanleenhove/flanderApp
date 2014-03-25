@@ -11,10 +11,6 @@
 #import <RMMapView.h>
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
-@class SideBarViewController;
-#import "SideBarDelegate.h"
-#import "SideBarView.h"
-
 #import "SideBarViewController.h"
 
 
@@ -24,7 +20,6 @@
 
 @property (nonatomic, strong) UIButton *btnNuttig;
 @property (nonatomic, assign) SEL knopTapped;
-@property (nonatomic, assign) SEL finishAnimation;
 
 
 @end

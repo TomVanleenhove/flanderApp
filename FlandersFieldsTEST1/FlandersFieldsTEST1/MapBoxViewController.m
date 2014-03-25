@@ -38,12 +38,9 @@
 }
 
 - (void)loadView{
+    CGRect bounds = CGRectMake(0, 0, 1024, 768);
+    self.view = [[MapBoxView alloc] initWithFrame:bounds];
     
-    self.view = [[MapBoxView alloc] initWithFrame:CGRectMake(0, 0, 700, 768)];
-    
-    
-    NSLog(@"frame height %f, frame width %f",self.view.frame.size.height,self.view.frame.size.width);
-
 }
 
 

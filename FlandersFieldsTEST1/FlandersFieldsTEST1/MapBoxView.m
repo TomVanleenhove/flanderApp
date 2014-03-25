@@ -43,8 +43,6 @@
 - (void)knopTapped:(id)sender{
     NSLog(@"[mapboxview] sidebar being tapped");
     
-    
-    
     SideBarViewController *sideBarVC = [[SideBarViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = sideBarVC;
     

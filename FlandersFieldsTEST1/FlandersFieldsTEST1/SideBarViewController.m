@@ -23,12 +23,6 @@
         NSLog(@"ok");
         self.view.backgroundColor = [UIColor blackColor];
         
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:1.0];
-        [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.view cache:YES];
-        
-        [UIView commitAnimations];
-        
     }
     return self;
 }
@@ -47,7 +41,7 @@
 
 
 - (void)loadView{
-    CGRect bounds = CGRectMake(200, 0, 200, 768);
+    CGRect bounds = CGRectMake(0, 0, 200, 768);
     self.view = [[SideBarView alloc] initWithFrame:bounds];
     
 }
