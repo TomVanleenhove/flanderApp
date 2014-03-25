@@ -22,17 +22,12 @@
         [self addSubview:self.mapView];
         
         
-        
         self.btnNuttig = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.btnNuttig setTitle:@"Click me" forState:UIControlStateNormal];
         self.btnNuttig.frame = CGRectMake(0, 0, 200, 30);
         self.btnNuttig.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height - (100));
         [self addSubview:self.btnNuttig];
         [self.btnNuttig addTarget:self action:@selector(knopTapped:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
-        
-        
         
     }
     return self;

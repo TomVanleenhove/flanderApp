@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
         
         
         UIImage *image = [UIImage imageNamed:@"interface"];

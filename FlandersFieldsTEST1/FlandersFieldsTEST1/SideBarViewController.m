@@ -19,8 +19,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
         
-        self.view.opaque = NO;
+        
         
     }
     return self;
