@@ -19,6 +19,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.view.alpha = 0;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:3.0];
+        self.view.alpha = 1;
+        [UIView commitAnimations];
         
         
     }
@@ -39,9 +45,7 @@
 
 - (void)loadView{
     CGRect bounds = CGRectMake(0, 0, 1024, 768);
-    MapBoxView *view = [[MapBoxView alloc] initWithFrame:bounds];
-    
-    self.view = view;
+    self.view = [[MapBoxView alloc] initWithFrame:bounds];
     
 }
 

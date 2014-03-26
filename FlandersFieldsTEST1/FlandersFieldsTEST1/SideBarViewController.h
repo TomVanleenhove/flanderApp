@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SideBarView.h"
+#import "MapBoxView.h"
 
 @interface SideBarViewController : UIViewController
 

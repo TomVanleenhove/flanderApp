@@ -15,17 +15,38 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
-        
+
+        NSLog(@"sidebar added");
         
         UIImage *image = [UIImage imageNamed:@"interface"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        self.frame = CGRectMake(0,0,512,768);
+        [imageView setCenter:CGPointMake(0, imageView.frame.size.height / 2)];
         [self addSubview:imageView];
+        
+        [UIView beginAnimations:@"bucketsOff" context:nil];
+        [UIView setAnimationDuration:0.4];
+        [UIView setAnimationDelegate:self];
+        //position off screen
+        [imageView setCenter:CGPointMake((imageView.frame.size.width / 2) -10, imageView.frame.size.height / 2)];
+        //animate off screen
+        [UIView commitAnimations];
+        
+        
+        
         
     }
     return self;
 }
+
+
+- (void)PullKnop2:(id)sender{
+    NSLog(@"[mapboxview] sidebar being tapped");
+    
+    
+    
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

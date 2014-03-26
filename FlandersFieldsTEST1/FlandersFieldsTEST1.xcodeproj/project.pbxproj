@@ -14,6 +14,7 @@
 		83945BC918E1CCC900C0837E /* SideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC818E1CCC900C0837E /* SideBarViewController.m */; };
 		83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82A18E21BA3008B88D4 /* StartschermViewController.m */; };
 		83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82D18E21BBF008B88D4 /* StartSchermView.m */; };
+		83DED83318E30C33008B88D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DED83218E30C33008B88D4 /* MediaPlayer.framework */; };
 		83F7ED8C18E1B8D900D8A069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8B18E1B8D900D8A069 /* Foundation.framework */; };
 		83F7ED8E18E1B8D900D8A069 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */; };
 		83F7ED9018E1B8D900D8A069 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F7ED8F18E1B8D900D8A069 /* UIKit.framework */; };
@@ -53,6 +54,7 @@
 		83DED82A18E21BA3008B88D4 /* StartschermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartschermViewController.m; sourceTree = "<group>"; };
 		83DED82C18E21BBF008B88D4 /* StartSchermView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartSchermView.h; sourceTree = "<group>"; };
 		83DED82D18E21BBF008B88D4 /* StartSchermView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartSchermView.m; sourceTree = "<group>"; };
+		83DED83218E30C33008B88D4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		83F7ED8818E1B8D900D8A069 /* FlandersFieldsTEST1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlandersFieldsTEST1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F7ED8B18E1B8D900D8A069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DED83318E30C33008B88D4 /* MediaPlayer.framework in Frameworks */,
 				83F7ED8E18E1B8D900D8A069 /* CoreGraphics.framework in Frameworks */,
 				83F7ED9018E1B8D900D8A069 /* UIKit.framework in Frameworks */,
 				83F7ED8C18E1B8D900D8A069 /* Foundation.framework in Frameworks */,
@@ -152,6 +155,7 @@
 		83F7ED8A18E1B8D900D8A069 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83DED83218E30C33008B88D4 /* MediaPlayer.framework */,
 				83F7ED8B18E1B8D900D8A069 /* Foundation.framework */,
 				83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */,
 				83F7ED8F18E1B8D900D8A069 /* UIKit.framework */,

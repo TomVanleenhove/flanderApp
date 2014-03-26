@@ -17,17 +17,19 @@
         // Initialization code
         
         
+        
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hjogkfe8"];
-        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.854656, 2.887257) zoomLevel:2 maxZoomLevel:15 minZoomLevel:4 backgroundImage:nil];
+        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.868008, 2.886401) zoomLevel:10 maxZoomLevel:20 minZoomLevel:11 backgroundImage:nil];
         [self addSubview:self.mapView];
+
         
-        
-        self.btnNuttig = [UIButton buttonWithType:UIButtonTypeSystem];
-        [self.btnNuttig setTitle:@"Click me" forState:UIControlStateNormal];
-        self.btnNuttig.frame = CGRectMake(0, 0, 200, 30);
-        self.btnNuttig.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height - (100));
+        self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *startBtn = [UIImage imageNamed:@"pull"];
+        [self.btnNuttig setBackgroundImage:startBtn forState:normal];
         [self addSubview:self.btnNuttig];
-        [self.btnNuttig addTarget:self action:@selector(knopTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [self.btnNuttig setFrame:CGRectMake(-40, (self.frame.size.height - startBtn.size.height) / 2, startBtn.size.width, startBtn.size.height)];
+        [self.btnNuttig addTarget:self action:@selector(PullKnop:) forControlEvents:UIControlEventTouchUpInside];
+
         
     }
     return self;
@@ -36,11 +38,14 @@
 
 
 
-- (void)knopTapped:(id)sender{
+- (void)PullKnop:(id)sender{
     NSLog(@"[mapboxview] sidebar being tapped");
+
     
-    SideBarViewController *sideBarVC = [[SideBarViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = sideBarVC;
+    UIView *centerView = [[SideBarView alloc] init];
+    [centerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addSubview:centerView];
+
     
 }
 

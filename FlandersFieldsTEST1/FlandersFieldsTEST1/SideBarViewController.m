@@ -44,6 +44,8 @@
     CGRect bounds = CGRectMake(0, 0, 200, 768);
     self.view = [[SideBarView alloc] initWithFrame:bounds];
     
+    
+    
 }
 
 /*
