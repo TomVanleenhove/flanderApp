@@ -11,8 +11,9 @@
 @interface StartSchermView : UIView
 
 
-
 @property (nonatomic, strong) UIButton *btnStart;
 @property (nonatomic, assign) SEL startKnopTapped;
+
+
 
 @end

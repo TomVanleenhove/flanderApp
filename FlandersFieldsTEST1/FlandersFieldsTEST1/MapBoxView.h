@@ -11,7 +11,7 @@
 #import <RMMapView.h>
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
-#import "SideBarViewController.h"
+#import "SideBarView.h"
 
 
 @interface MapBoxView : UIView
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) RMMapView *mapView;
 
 @property (nonatomic, strong) UIButton *btnNuttig;
-@property (nonatomic, assign) SEL knopTapped;
+@property (nonatomic, assign) SEL PullKnop;
 
 
 @end

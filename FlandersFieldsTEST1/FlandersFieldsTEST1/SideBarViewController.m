@@ -19,8 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-
-        
         
         
     }
@@ -31,7 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
