@@ -1,6 +1,6 @@
 <?php
-require_once WWW_ROOT . 'classes' . DIRECTORY_SEPARATOR . 'DatabasePDO.php';
-require_once WWW_ROOT . 'classes' . DIRECTORY_SEPARATOR . 'Config.php';
+
+require_once '../classes' . DIRECTORY_SEPARATOR . 'DatabasePDO.php';
 
 class CheckpointsDAO
 {
@@ -31,10 +31,11 @@ class CheckpointsDAO
                 FROM `flanders_points`
                 WHERE type = 2";
         $stmt = $this->pdo->prepare($sql);
-        if($stmt->execute()){
-            $todos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            if(!empty($pastPoints)){
-                return $pastPoints;
+        if($stmt->execute())
+        {
+            $pastpoints = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            if(!empty($pastpoints)){
+                return $pastpoints;
             }
         }
         return array();
@@ -46,8 +47,9 @@ class CheckpointsDAO
                 FROM `flanders_points`
                 WHERE type = 3";
         $stmt = $this->pdo->prepare($sql);
-        if($stmt->execute()){
-            $todos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if($stmt->execute())
+        {
+            $mines = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if(!empty($mines)){
                 return $mines;
             }

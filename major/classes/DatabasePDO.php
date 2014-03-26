@@ -1,6 +1,6 @@
 <?php
 
-require_once WWW_ROOT . 'classes'. DS .'Config.php';
+require_once 'Config.php';
 
 class DatabasePDO
 {
@@ -13,5 +13,4 @@ class DatabasePDO
 		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         return $pdo;
     }
-    
 }
