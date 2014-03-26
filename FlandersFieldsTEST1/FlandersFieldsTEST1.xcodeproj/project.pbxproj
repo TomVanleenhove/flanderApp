@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03B61A9E599E4F1C9571BC1A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE04679DB134EF0ABD1C219 /* libPods.a */; };
+		03B61A9E599E4F1C9571BC1A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE04679DB134EF0ABD1C219 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
@@ -471,6 +471,7 @@
 				INFOPLIST_FILE = "FlandersFieldsTEST1/FlandersFieldsTEST1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -488,6 +489,7 @@
 				INFOPLIST_FILE = "FlandersFieldsTEST1/FlandersFieldsTEST1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB9E3496-6211-4A5A-924D-98BFA3065B91</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlandersFieldsTEST1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D65FAC45-983C-4631-857B-E92472A71399</key>
+		<string>https://github.com/TomVanleenhove/flanderApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlandersFieldsTEST1/FlandersFieldsTEST1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D65FAC45-983C-4631-857B-E92472A71399</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TomVanleenhove/flanderApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D65FAC45-983C-4631-857B-E92472A71399</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D65FAC45-983C-4631-857B-E92472A71399</string>
+			<key>IDESourceControlWCCName</key>
+			<string>flanderApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
