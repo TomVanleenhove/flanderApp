@@ -31,6 +31,8 @@
         [self.btnNuttig addTarget:self action:@selector(PullKnop:) forControlEvents:UIControlEventTouchUpInside];
 
         
+        
+        
     }
     return self;
 }
@@ -45,6 +47,11 @@
     UIView *centerView = [[SideBarView alloc] init];
     [centerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:centerView];
+    
+    
+    if (!centerView) {
+        NSLog(@"geen center");
+    }
 
     
 }
