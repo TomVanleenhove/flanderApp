@@ -32,10 +32,8 @@
         [UIView commitAnimations];
         
         
-        UITapGestureRecognizer *singleFingerTap =
-        [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                action:@selector(handleSingleTap:)];
-        [self addGestureRecognizer:singleFingerTap];
+        
+        
         
         
     }
@@ -49,15 +47,6 @@
     
     
 }
-
-
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
-    //CGPoint location = [recognizer locationInView:[recognizer.view superview]];
-    NSLog(@"tap");
-    
-    //Do stuff here...
-}
-
 
 
 
