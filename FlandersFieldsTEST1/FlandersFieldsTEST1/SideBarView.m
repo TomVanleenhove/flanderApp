@@ -50,11 +50,21 @@
         self.lblDate.textAlignment = NSTextAlignmentCenter;
         //RGB(254, 198, 112)
         self.lblDate.textColor = [UIColor brownColor];
-        self.lblDate.text = @" °1885 +1932)";
+        self.lblDate.text = @" (1885 - 1932)";
         self.lblDate.center = CGPointMake(bgview.frame.size.width/2 - 10, 237);
         self.lblDate.alpha = 0.8    ;
-        self.lblDate.font = [UIFont fontWithName:@"Aleo-Regular" size:20];
+        self.lblDate.font = [UIFont fontWithName:@"AWConquerorSlab-Light" size:20];
         [self addSubview:self.lblDate];
+        
+        self.txtInfo = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+        self.txtInfo.textAlignment = NSTextAlignmentLeft;
+        self.txtInfo.textColor = [UIColor brownColor];
+        self.txtInfo.text = @"André Mare is geboren in Argentan (Frankrijk) op 31 januari 1885. Hij 	toont al vroeg talent voor het tekenen en gaat dan ook toegepaste kunst en tekenen studeren in Parijs. Daar deelt hij een atelier met Fernand Léger op Montparnasse. Hij ontwerpt meubels, maar tekent en schildert ook. Hij stelt verschillende malen tentoon en vanaf 1912 gaat hij in zijn ontwerpen de kubistische toer op. Wanneer de oorlog uitbreekt, wordt hij wederopgeroepen en vertrekt als artillerist. Hij houdt een boekje bij waarin hij schrijft, tekent en schildert. In 1915 maakt hij het zware offensief in de Champagne mee.";
+        self.txtInfo.center = CGPointMake(bgview.frame.size.width/2 - 10, 437);
+        self.txtInfo.alpha = 0.8    ;
+        self.txtInfo.font = [UIFont fontWithName:@"aleo" size:20];
+        [self addSubview:self.txtInfo];
+        
         
         
         

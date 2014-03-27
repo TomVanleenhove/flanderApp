@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>AWConquerorSlab-Light.otf</string>
 		<string>Aleo-Regular.otf</string>
 		<string>Governor.ttf</string>
 	</array>
