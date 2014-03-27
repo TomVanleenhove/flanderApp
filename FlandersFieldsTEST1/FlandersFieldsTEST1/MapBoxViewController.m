@@ -26,6 +26,68 @@
         self.view.alpha = 1;
         [UIView commitAnimations];
         
+        NSString *pathStars = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/checkpoints/getStars";
+        NSString *pathMinens = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/checkpoints/getMines";
+        NSString *pathPast = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/checkpoints/getPastPoints";
+        NSString *pathStories = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/stories/getStories";
+        
+        NSURL *urlStars = [NSURL URLWithString:pathStars];
+        NSURL *urlMinens = [NSURL URLWithString:pathMinens];
+        NSURL *urlPast = [NSURL URLWithString:pathPast];
+        NSURL *urlStories = [NSURL URLWithString:pathStories];
+        
+        NSURLRequest *requestStars = [NSURLRequest requestWithURL:urlStars];
+        NSURLRequest *requestMinens = [NSURLRequest requestWithURL:urlMinens];
+        NSURLRequest *requestPast = [NSURLRequest requestWithURL:urlPast];
+        NSURLRequest *requestStories = [NSURLRequest requestWithURL:urlStories];
+        
+        AFHTTPRequestOperation *operationStars = [[AFHTTPRequestOperation alloc] initWithRequest:requestStars];
+        AFHTTPRequestOperation *operationMinens = [[AFHTTPRequestOperation alloc] initWithRequest:requestMinens];
+        AFHTTPRequestOperation *operationPast = [[AFHTTPRequestOperation alloc] initWithRequest:requestPast];
+        AFHTTPRequestOperation *operationStories = [[AFHTTPRequestOperation alloc] initWithRequest:requestStories];
+        
+        operationStars.responseSerializer =[AFJSONResponseSerializer serializer];
+        operationMinens.responseSerializer =[AFJSONResponseSerializer serializer];
+        operationPast.responseSerializer =[AFJSONResponseSerializer serializer];
+        operationStories.responseSerializer =[AFJSONResponseSerializer serializer];
+        
+        
+        self.stars = [NSMutableArray array];
+        self.mines = [NSMutableArray array];
+        self.pasts = [NSMutableArray array];
+        self.stories = [NSMutableArray array];
+        
+        [operationStars setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStars, id responseObject) {
+            NSLog(@"loaded StarPoints");
+            self.stars = responseObject;
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error loading StarPoints");
+        }];
+        [operationMinens setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationMinens, id responseObject) {
+            NSLog(@"loaded minePoints");
+            self.mines = responseObject;
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error loading minePoints");
+        }];
+        [operationPast setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationPast, id responseObject) {
+            NSLog(@"loaded pastPoints");
+            self.pasts = responseObject;
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error loading pastPoints");
+        }];
+        [operationStories setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStories, id responseObject) {
+            NSLog(@"loaded stories");
+            self.stories = responseObject;
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error loading stories");
+        }];
+        
+        [operationStars start];
+        [operationMinens start];
+        [operationPast start];
+        [operationStories start];
+        
         
     }
     return self;
@@ -45,7 +107,9 @@
 
 - (void)loadView{
     CGRect bounds = CGRectMake(0, 0, 1024, 768);
-    self.view = [[MapBoxView alloc] initWithFrame:bounds];
+    self.view = [[MapBoxView alloc] initWithFrame:bounds andStories:self.stories andStars:self.stars andMines:self.mines andPasts:self.pasts];
+    
+    
     
 }
 

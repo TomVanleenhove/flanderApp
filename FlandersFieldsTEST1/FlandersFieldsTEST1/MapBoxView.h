@@ -12,6 +12,7 @@
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
 #import "SideBarView.h"
+#import "StartschermViewController.h"
 
 
 @interface MapBoxView : UIView
@@ -21,5 +22,5 @@
 @property (nonatomic, strong) UIButton *btnNuttig;
 @property (nonatomic, assign) SEL PullKnop;
 
-
+-(id)initWithFrame:(CGRect)frame andStories:(NSMutableArray *)stories andStars:(NSMutableArray *)stars andMines:(NSMutableArray *)mines andPasts:(NSMutableArray *)pasts;
 @end

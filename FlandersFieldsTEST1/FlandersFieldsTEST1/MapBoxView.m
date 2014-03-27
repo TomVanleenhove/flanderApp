@@ -10,18 +10,22 @@
 
 @implementation MapBoxView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame andStories:(NSMutableArray *)stories andStars:(NSMutableArray *)stars andMines:(NSMutableArray *)mines andPasts:(NSMutableArray *)pasts
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         
-        
-        
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hjogkfe8"];
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.868008, 2.886401) zoomLevel:10 maxZoomLevel:20 minZoomLevel:11 backgroundImage:nil];
         [self addSubview:self.mapView];
+        
+        for (NSDictionary *star in stars) {
+            NSLog(@"dans");
+        }
+        
 
+        
         
         self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];
         UIImage *startBtn = [UIImage imageNamed:@"pull"];
