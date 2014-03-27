@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
 #import <AFNetworking.h>
 #import "StartSchermView.h"
 
@@ -15,7 +14,6 @@
 @interface StartschermViewController : UIViewController
 
 @property(nonatomic) CGRect bounds;
-@property (strong, nonatomic) MPMoviePlayerViewController *playerViewController;
 
 
 

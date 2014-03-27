@@ -91,9 +91,12 @@
         [operationMines start];
         [operationPast start];
         [operationStories start];
-  
+
         
     }
+    
+
+    
     return self;
 }
 
