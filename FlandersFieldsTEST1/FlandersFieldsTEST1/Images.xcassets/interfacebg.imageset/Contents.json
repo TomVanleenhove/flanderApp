@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "interface.png"
+      "filename" : "interfacebg.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "interface@2x.png"
+      "filename" : "interfacebg@2x.png"
     }
   ],
   "info" : {

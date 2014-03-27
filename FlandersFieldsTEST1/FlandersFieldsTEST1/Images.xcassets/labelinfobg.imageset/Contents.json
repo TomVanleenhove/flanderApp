@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "bg.png"
+      "filename" : "labelinfobg.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "labelinfobg@2x.png"
     }
   ],
   "info" : {

@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "bg.png"
+      "filename" : "headerbgAndre.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "headerbgAndre@2x.png"
     }
   ],
   "info" : {

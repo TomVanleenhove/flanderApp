@@ -11,7 +11,7 @@
 #import <RMMapView.h>
 #import <RMMapboxSource.h>
 #import <RMPointAnnotation.h>
-#import "SideBarView.h"
+#import "SideBarViewController.h"
 #import "StartschermViewController.h"
 #import <RMPointAnnotation.h>
 #import <RMMarker.h>

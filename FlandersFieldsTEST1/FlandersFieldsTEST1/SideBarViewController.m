@@ -20,7 +20,6 @@
     if (self) {
         // Custom initialization
         
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"interface"]];
         
     }
     return self;
@@ -42,8 +41,13 @@
 
 
 - (void)loadView{
-    CGRect bounds = CGRectMake(0, 0, 200, 768);
+    CGRect bounds = CGRectMake(0, 0, 512, 768);
     self.view = [[SideBarView alloc] initWithFrame:bounds];
+    /*
+    UIView *sidebarView = [[SideBarView alloc] initWithFrame:bounds];
+    [sidebarView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.view = sidebarView;*/
+    
     
 }
 

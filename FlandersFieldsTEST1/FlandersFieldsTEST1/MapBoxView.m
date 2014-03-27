@@ -52,18 +52,10 @@
 
 - (void)PullKnop:(id)sender{
     NSLog(@"[mapboxview] sidebar being tapped");
-
     
-    UIView *centerView = [[SideBarView alloc] init];
-    [centerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addSubview:centerView];
-    
-    
-    if (!centerView) {
-        NSLog(@"geen center");
-    }
-
-    
+    UIView *sidebarView = [[SideBarView alloc] init];
+    [sidebarView setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self addSubview:sidebarView];
 }
 
 

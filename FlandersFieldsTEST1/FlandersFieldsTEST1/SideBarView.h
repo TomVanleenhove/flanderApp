@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
 @interface SideBarView : UIView
 
 
@@ -15,6 +15,7 @@
 @property (nonatomic, assign) SEL PullKnopback2;
 
 @property (strong, nonatomic) UILabel *lblNaam;
+@property (strong, nonatomic) UILabel *lblDate;
 
 
 

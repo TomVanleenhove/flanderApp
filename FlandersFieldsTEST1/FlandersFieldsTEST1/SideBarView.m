@@ -18,28 +18,55 @@
 
         NSLog(@"sidebar added");
         
-        /*UIImage *image = [UIImage imageNamed:@"interface"];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        [imageView setCenter:CGPointMake(0, imageView.frame.size.height / 2)];
-        [self addSubview:imageView];*/
+        
+        UIImage *bg = [UIImage imageNamed:@"interfacebg"];
+        UIImageView *bgview = [[UIImageView alloc] initWithImage:bg];
+        [bgview setCenter:CGPointMake((bgview.frame.size.width / 2)-5, bgview.frame.size.height / 2)];
+        [self addSubview:bgview];
+        
+        UIImage *headerbg = [UIImage imageNamed:@"headerbgAndre"];
+        UIImageView *headerbgViewAndre = [[UIImageView alloc] initWithImage:headerbg];
+        [headerbgViewAndre setCenter:CGPointMake((bgview.frame.size.width / 2)-5, 60)];
+        [self addSubview:headerbgViewAndre];
+
+        
+        UIImage *labelinfobg = [UIImage imageNamed:@"labelinfobg"];
+        UIImageView *labelinfo = [[UIImageView alloc] initWithImage:labelinfobg];
+        [labelinfo setCenter:CGPointMake((bgview.frame.size.width / 2)-5, 200)];
+        [self addSubview:labelinfo];
+        
+        self.lblNaam = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
+        self.lblNaam.textAlignment = NSTextAlignmentCenter;
+        //RGB(254, 198, 112)
+        self.lblNaam.textColor = [UIColor colorWithRed:254 green:198 blue:112 alpha:1];
+        self.lblNaam.text = @"Andre Mare";
+        self.lblNaam.center = CGPointMake(bgview.frame.size.width/2, 185);
+        self.lblNaam.font = [UIFont fontWithName:@"Governor" size:40];
+        self.lblNaam.shadowColor = [UIColor blackColor];
+        self.lblNaam.shadowOffset = CGSizeMake(0.0, 1.0);
+        [self addSubview:self.lblNaam];
+        
+        self.lblDate = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
+        self.lblDate.textAlignment = NSTextAlignmentCenter;
+        //RGB(254, 198, 112)
+        self.lblDate.textColor = [UIColor brownColor];
+        self.lblDate.text = @" °1885 +1932)";
+        self.lblDate.center = CGPointMake(bgview.frame.size.width/2 - 10, 237);
+        self.lblDate.alpha = 0.8    ;
+        self.lblDate.font = [UIFont fontWithName:@"Aleo-Regular" size:20];
+        [self addSubview:self.lblDate];
+        
+        
+        
         
         [UIView beginAnimations:@"bucketsOff" context:nil];
         [UIView setAnimationDuration:0.4];
         [UIView setAnimationDelegate:self];
         //position off screen
+        //[bgview setCenter:CGPointMake((bgview.frame.size.width / 2)-5, bgview.frame.size.height / 2)];
+        //[labelbgview setCenter:CGPointMake((bgview.frame.size.width / 2)-5, bgview.frame.size.height / 2)];
         //animate off screen
         [UIView commitAnimations];
-        
-        self.lblNaam = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-        self.lblNaam.textAlignment = NSTextAlignmentCenter;
-        self.lblNaam.textColor = [UIColor blackColor];
-        self.lblNaam.text = @"Andre Mare";
-        self.lblNaam.center = CGPointMake(100, 200);
-        [self addSubview:self.lblNaam];
-        
-        
-        
-        
         
         
     }
