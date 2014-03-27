@@ -20,11 +20,10 @@
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.868008, 2.886401) zoomLevel:10 maxZoomLevel:20 minZoomLevel:11 backgroundImage:nil];
         [self addSubview:self.mapView];
         
+        NSLog(@"%@",stars);
         for (NSDictionary *star in stars) {
             NSLog(@"dans");
         }
-        
-
         
         
         self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];

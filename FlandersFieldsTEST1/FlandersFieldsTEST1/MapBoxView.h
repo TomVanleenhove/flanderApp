@@ -22,5 +22,10 @@
 @property (nonatomic, strong) UIButton *btnNuttig;
 @property (nonatomic, assign) SEL PullKnop;
 
+@property (strong, nonatomic) NSMutableArray *stories;
+@property (strong, nonatomic) NSMutableArray *stars;
+@property (strong, nonatomic) NSMutableArray *mines;
+@property (strong, nonatomic) NSMutableArray *pasts;
+
 -(id)initWithFrame:(CGRect)frame andStories:(NSMutableArray *)stories andStars:(NSMutableArray *)stars andMines:(NSMutableArray *)mines andPasts:(NSMutableArray *)pasts;
 @end

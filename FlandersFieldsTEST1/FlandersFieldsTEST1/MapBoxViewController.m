@@ -52,36 +52,38 @@
         operationStories.responseSerializer =[AFJSONResponseSerializer serializer];
         
         
-        self.stars = [NSMutableArray array];
-        self.mines = [NSMutableArray array];
-        self.pasts = [NSMutableArray array];
-        self.stories = [NSMutableArray array];
-        
         [operationStars setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStars, id responseObject) {
             NSLog(@"loaded StarPoints");
+            self.stars = [NSMutableArray array];
             self.stars = responseObject;
+            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading StarPoints");
         }];
         [operationMinens setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationMinens, id responseObject) {
             NSLog(@"loaded minePoints");
+            self.mines = [NSMutableArray array];
             self.mines = responseObject;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading minePoints");
         }];
         [operationPast setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationPast, id responseObject) {
             NSLog(@"loaded pastPoints");
+            self.pasts = [NSMutableArray array];
             self.pasts = responseObject;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading pastPoints");
         }];
         [operationStories setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStories, id responseObject) {
             NSLog(@"loaded stories");
+            self.stories = [NSMutableArray array];
             self.stories = responseObject;
+            NSLog(@"%@",self.stories);
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading stories");
         }];
+        
         
         [operationStars start];
         [operationMinens start];
@@ -106,11 +108,8 @@
 }
 
 - (void)loadView{
-    CGRect bounds = CGRectMake(0, 0, 1024, 768);
+        CGRect bounds = CGRectMake(0, 0, 1024, 768);
     self.view = [[MapBoxView alloc] initWithFrame:bounds andStories:self.stories andStars:self.stars andMines:self.mines andPasts:self.pasts];
-    
-    
-    
 }
 
 
