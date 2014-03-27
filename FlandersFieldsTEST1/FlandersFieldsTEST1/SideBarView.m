@@ -18,18 +18,24 @@
 
         NSLog(@"sidebar added");
         
-        UIImage *image = [UIImage imageNamed:@"interface"];
+        /*UIImage *image = [UIImage imageNamed:@"interface"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         [imageView setCenter:CGPointMake(0, imageView.frame.size.height / 2)];
-        [self addSubview:imageView];
+        [self addSubview:imageView];*/
         
         [UIView beginAnimations:@"bucketsOff" context:nil];
         [UIView setAnimationDuration:0.4];
         [UIView setAnimationDelegate:self];
         //position off screen
-        [imageView setCenter:CGPointMake((imageView.frame.size.width / 2) -10, imageView.frame.size.height / 2)];
         //animate off screen
         [UIView commitAnimations];
+        
+        self.lblNaam = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+        self.lblNaam.textAlignment = NSTextAlignmentCenter;
+        self.lblNaam.textColor = [UIColor blackColor];
+        self.lblNaam.text = @"Andre Mare";
+        self.lblNaam.center = CGPointMake(100, 200);
+        [self addSubview:self.lblNaam];
         
         
         

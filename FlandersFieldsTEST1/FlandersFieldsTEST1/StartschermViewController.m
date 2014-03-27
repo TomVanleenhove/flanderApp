@@ -20,6 +20,8 @@
     if (self) {
         // Custom initialization
         
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"startscherm"]];
+        
     }
     return self;
 }

@@ -14,5 +14,8 @@
 @property (nonatomic, strong) UIButton *btnBack;
 @property (nonatomic, assign) SEL PullKnopback2;
 
+@property (strong, nonatomic) UILabel *lblNaam;
+
+
 
 @end

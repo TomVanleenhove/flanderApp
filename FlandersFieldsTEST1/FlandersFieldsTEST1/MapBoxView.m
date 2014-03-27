@@ -16,14 +16,25 @@
     if (self) {
         // Initialization code
         
-        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hjogkfe8"];
-        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.868008, 2.886401) zoomLevel:10 maxZoomLevel:20 minZoomLevel:11 backgroundImage:nil];
+        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hkknk2f2"];
+        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.875729, 2.899617) zoomLevel: 15 maxZoomLevel:20 minZoomLevel: 10 backgroundImage:[UIImage imageNamed:@"bg"]];
+        
+        
+        
+        RMPointAnnotation *annotation1 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.883392, 2.897858) andTitle:@"Stop 1"];
+        RMPointAnnotation *annotation2 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.883406, 2.880240) andTitle:@"Stop 2"];
+        RMPointAnnotation *annotation3 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.873617, 2.898415) andTitle:@"Stop 3"];
+        RMPointAnnotation *annotation4 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.877990, 2.910067) andTitle:@"Stop 4"];
+        RMPointAnnotation *annotation5 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.879561, 2.897922) andTitle:@"Stop 5"];
+        
+        NSMutableArray *points = [NSMutableArray arrayWithObjects: annotation1, annotation2, annotation3, annotation4, annotation5, nil];
+        [self.mapView addAnnotations:points];
         [self addSubview:self.mapView];
         
-        NSLog(@"%@",stars);
-        for (NSDictionary *star in stars) {
-            NSLog(@"dans");
-        }
+        NSLog(@"[mapview] stories %@",self.stories);
+        NSLog(@"[mapview] stars %@",self.stars);
+        NSLog(@"[mapview] pasts %@",self.pasts);
+        NSLog(@"[mapview] mines %@",self.mines);
         
         
         self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -32,15 +43,11 @@
         [self addSubview:self.btnNuttig];
         [self.btnNuttig setFrame:CGRectMake(-40, (self.frame.size.height - startBtn.size.height) / 2, startBtn.size.width, startBtn.size.height)];
         [self.btnNuttig addTarget:self action:@selector(PullKnop:) forControlEvents:UIControlEventTouchUpInside];
-
-        
         
         
     }
     return self;
 }
-
-
 
 
 - (void)PullKnop:(id)sender{
