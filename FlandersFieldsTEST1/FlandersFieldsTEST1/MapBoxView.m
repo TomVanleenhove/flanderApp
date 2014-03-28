@@ -47,7 +47,7 @@
         CLLocationCoordinate2D coord;
         coord.longitude = (CLLocationDegrees)[parsedStar.latitude doubleValue];
         coord.latitude = (CLLocationDegrees)[parsedStar.longitude doubleValue];
-        NSString *title = [NSString stringWithFormat:@"star%d", parsedStar.pointId];
+        NSString *title = [NSString stringWithFormat:@"Heldendaad %d", parsedStar.pointId];
         
         RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
         
@@ -64,7 +64,7 @@
         CLLocationCoordinate2D coord;
         coord.longitude = (CLLocationDegrees)[parsedPast.latitude doubleValue];
         coord.latitude = (CLLocationDegrees)[parsedPast.longitude doubleValue];
-        NSString *title = [NSString stringWithFormat:@"past%d", parsedPast.pointId];
+        NSString *title = [NSString stringWithFormat:@"Terug in de tijd %d", parsedPast.pointId];
         
         RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
         [annotation setAnchorPoint:CGPointMake(annotation.annotationIcon.size.height, (annotation.annotationIcon.size.width / 2) - 10)];
@@ -81,7 +81,7 @@
         CLLocationCoordinate2D coord;
         coord.longitude = (CLLocationDegrees)[parsedMines.latitude doubleValue];
         coord.latitude = (CLLocationDegrees)[parsedMines.longitude doubleValue];
-        NSString *title = [NSString stringWithFormat:@"mine"];
+        NSString *title = [NSString stringWithFormat:@"Bomalarm"];
         
         RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
         
