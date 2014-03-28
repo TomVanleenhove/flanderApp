@@ -15,9 +15,12 @@
 //#import "StartschermViewController.h"
 #import <RMPointAnnotation.h>
 #import <RMMarker.h>
+#import "AnnotationPoint.h"
+#import "AnnotationPointFactory.h"
 
 
-@interface MapBoxView : UIView
+
+@interface MapBoxView : UIView<RMMapViewDelegate>
 
 @property (strong, nonatomic) RMMapView *mapView;
 

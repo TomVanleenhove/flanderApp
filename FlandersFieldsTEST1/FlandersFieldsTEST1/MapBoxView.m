@@ -15,23 +15,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        NSLog(@"VIEW %@",self.stories);
+        NSLog(@"VIEW %@",self.stars);
         
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hkknk2f2"];
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.875729, 2.899617) zoomLevel: 15 maxZoomLevel:20 minZoomLevel: 10 backgroundImage:[UIImage imageNamed:@"bg"]];
         
+        self.mapView.delegate = self;
         
-        
-        RMPointAnnotation *annotation1 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.883392, 2.897858) andTitle:@"Stop 1"];
-        RMPointAnnotation *annotation2 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.883406, 2.880240) andTitle:@"Stop 2"];
-        RMPointAnnotation *annotation3 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.873617, 2.898415) andTitle:@"Stop 3"];
-        RMPointAnnotation *annotation4 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.877990, 2.910067) andTitle:@"Stop 4"];
-        RMPointAnnotation *annotation5 = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake(50.879561, 2.897922) andTitle:@"Stop 5"];
-        
-        NSMutableArray *points = [NSMutableArray arrayWithObjects: annotation1, annotation2, annotation3, annotation4, annotation5, nil];
-        [self.mapView addAnnotations:points];
         [self addSubview:self.mapView];
-        
         
         CGRect bounds = CGRectMake(0, 0, 552, 768);
         self.sidebar = [[SideBarView alloc] initWithFrame:bounds];
@@ -40,13 +31,87 @@
     return self;
 }
 
+- (void)setStars:(NSMutableArray *)newStars {
+    for (NSDictionary *star in newStars) {
+         AnnotationPoint *parsedStar = [AnnotationPointFactory createAnnotationPointFromDictionary:star];
+        
+        CLLocationCoordinate2D coord;
+        coord.longitude = (CLLocationDegrees)[parsedStar.latitude doubleValue];
+        coord.latitude = (CLLocationDegrees)[parsedStar.longitude doubleValue];
+        NSString *title = [NSString stringWithFormat:@"star%d", parsedStar.pointId];
+        
+        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        
+        annotation.userInfo = @"star";
+        
+        [self.mapView addAnnotation:annotation];
+    }
+    
+}
+- (void)setPasts:(NSMutableArray *)newPasts {
+    for (NSDictionary *past in newPasts) {
+        AnnotationPoint *parsedPast = [AnnotationPointFactory createAnnotationPointFromDictionary:past];
+        
+        CLLocationCoordinate2D coord;
+        coord.longitude = (CLLocationDegrees)[parsedPast.latitude doubleValue];
+        coord.latitude = (CLLocationDegrees)[parsedPast.longitude doubleValue];
+        NSString *title = [NSString stringWithFormat:@"past%d", parsedPast.pointId];
+        
+        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        
+        annotation.userInfo = @"past";
+        
+        [self.mapView addAnnotation:annotation];
+    }
+}
+- (void)setMines:(NSMutableArray *)newMines {
+    for (NSDictionary *mine in newMines) {
+        AnnotationPoint *parsedMines = [AnnotationPointFactory createAnnotationPointFromDictionary:mine];
+        
+        CLLocationCoordinate2D coord;
+        coord.longitude = (CLLocationDegrees)[parsedMines.latitude doubleValue];
+        coord.latitude = (CLLocationDegrees)[parsedMines.longitude doubleValue];
+        NSString *title = [NSString stringWithFormat:@"mine"];
+        
+        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        
+        annotation.userInfo = @"mine";
+        
+        [self.mapView addAnnotation:annotation];
+        
+        
+    }
 
+}
+/*- (void)setStories:(NSMutableArray *)newStories {
+    self.stories = newStories;
+}*/
 
-
-
-
-
-
+- (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
+{
+    NSLog(@"DANSEN DANSEN DANSE");
+    if (annotation.isUserLocationAnnotation)
+        return nil;
+    
+    RMMarker *marker;
+    
+    if ([annotation.userInfo isEqualToString:@"star"])
+    {
+        marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"star(icon)"]];
+    }
+    else if ([annotation.userInfo isEqualToString:@"past"])
+    {
+        marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"past(icon)"]];
+    }
+    else if ([annotation.userInfo isEqualToString:@"mine"])
+    {
+        marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"mine(icon)"]];
+    }
+    
+    marker.canShowCallout = YES;
+    
+    return marker;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

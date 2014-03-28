@@ -55,33 +55,28 @@
         [operationStars setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStars, id responseObject) {
             //NSLog(@"loaded StarPoints");
             self.stars = [NSMutableArray array];
-            self.stars = responseObject;
-            NSLog(@"stars %@",self.stars);
+            self.view.stars = responseObject;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading StarPoints");
         }];
         [operationMines setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationMines, id responseObject) {
             //NSLog(@"loaded minePoints");
             self.mines = [NSMutableArray array];
-            self.mines = responseObject;
-            NSLog(@"mines %@",self.mines);
+            self.view.mines = responseObject;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading minePoints");
         }];
         [operationPast setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationPast, id responseObject) {
             //NSLog(@"loaded pastPoints");
             self.pasts = [NSMutableArray array];
-            self.pasts = responseObject;
-            NSLog(@"pasts %@",self.pasts);
+            self.view.pasts = responseObject;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading pastPoints");
         }];
         [operationStories setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operationStories, id responseObject) {
             //NSLog(@"loaded stories");
             self.stories = [NSMutableArray array];
-            self.stories = responseObject;
-            NSLog(@"stories %@",self.stories);
-            
+            self.view.stories = responseObject;            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading stories");
         }];
@@ -101,14 +96,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.stories = self.stories;
-    NSLog(@"[MapController] %@",self.stories);
-    self.view.stars = self.stars;
-    NSLog(@"[MapController] %@",self.stars);
-    self.view.mines = self.mines;
-    NSLog(@"[MapController] %@",self.mines);
-    self.view.pasts = self.pasts;
-    NSLog(@"[MapController] %@",self.pasts);
+    
 }
 
 - (void)didReceiveMemoryWarning
