@@ -15,8 +15,8 @@
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
+		83CEE51318E575FE00AC64C9 /* Aleo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83CEE51218E575FE00AC64C9 /* Aleo-Regular.otf */; };
 		83D88D4718E479DD007BCC55 /* governor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4618E479DD007BCC55 /* governor.ttf */; };
-		83D88D4A18E485F6007BCC55 /* aleo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4918E485F6007BCC55 /* aleo.otf */; };
 		83D88D4C18E48782007BCC55 /* AWConquerorSlab-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */; };
 		83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82A18E21BA3008B88D4 /* StartschermViewController.m */; };
 		83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82D18E21BBF008B88D4 /* StartSchermView.m */; };
@@ -62,8 +62,8 @@
 		83945BC218E1BAFB00C0837E /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		83945BC418E1CCBC00C0837E /* SideBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarView.h; sourceTree = "<group>"; };
 		83945BC518E1CCBC00C0837E /* SideBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarView.m; sourceTree = "<group>"; };
+		83CEE51218E575FE00AC64C9 /* Aleo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Aleo-Regular.otf"; path = "../../../../../../../Downloads/Aleo-Regular.otf"; sourceTree = "<group>"; };
 		83D88D4618E479DD007BCC55 /* governor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = governor.ttf; sourceTree = "<group>"; };
-		83D88D4918E485F6007BCC55 /* aleo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aleo.otf; sourceTree = "<group>"; };
 		83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AWConquerorSlab-Light.otf"; sourceTree = "<group>"; };
 		83DED82918E21BA3008B88D4 /* StartschermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartschermViewController.h; sourceTree = "<group>"; };
 		83DED82A18E21BA3008B88D4 /* StartschermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartschermViewController.m; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 		83D88D4818E479F2007BCC55 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83CEE51218E575FE00AC64C9 /* Aleo-Regular.otf */,
 				83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */,
-				83D88D4918E485F6007BCC55 /* aleo.otf */,
 				83D88D4618E479DD007BCC55 /* governor.ttf */,
 			);
 			name = Resources;
@@ -322,9 +322,9 @@
 			files = (
 				83D88D4C18E48782007BCC55 /* AWConquerorSlab-Light.otf in Resources */,
 				83F7ED9618E1B8D900D8A069 /* InfoPlist.strings in Resources */,
+				83CEE51318E575FE00AC64C9 /* Aleo-Regular.otf in Resources */,
 				83D88D4718E479DD007BCC55 /* governor.ttf in Resources */,
 				83F7ED9E18E1B8D900D8A069 /* Images.xcassets in Resources */,
-				83D88D4A18E485F6007BCC55 /* aleo.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

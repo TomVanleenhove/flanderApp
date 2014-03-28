@@ -70,7 +70,7 @@
         self.lblInfo.text = @"André Mare is geboren in Argentan (Frankrijk) op 31 januari 1885. Hij 	toont al vroeg talent voor het tekenen en gaat dan ook toegepaste kunst en tekenen studeren in Parijs. Daar deelt hij een atelier met Fernand Léger op Montparnasse. Hij ontwerpt meubels, maar tekent en schildert ook. Hij stelt verschillende malen tentoon en vanaf 1912 gaat hij in zijn ontwerpen de kubistische toer op. Wanneer de oorlog uitbreekt, wordt hij wederopgeroepen en vertrekt als artillerist. Hij houdt een boekje bij waarin hij schrijft, tekent en schildert. In 1915 maakt hij het zware offensief in de Champagne mee.";
         self.lblInfo.center = CGPointMake(bgview.frame.size.width/2 - 10, 437);
         self.lblInfo.alpha = 0.8    ;
-        self.lblInfo.font = [UIFont fontWithName:@"Aleo-Regular" size:20];
+        self.lblInfo.font = [UIFont fontWithName:@"Aleo-Regular" size:17];
         [self addSubview:self.lblInfo];
         
         [UIView beginAnimations:@"bucketsOff" context:nil];
