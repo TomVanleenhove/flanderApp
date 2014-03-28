@@ -43,7 +43,7 @@
         coord.latitude = (CLLocationDegrees)[parsedStar.longitude doubleValue];
         NSString *title = [NSString stringWithFormat:@"star%d", parsedStar.pointId];
         
-        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
         
         annotation.userInfo = @"star";
         
@@ -60,7 +60,8 @@
         coord.latitude = (CLLocationDegrees)[parsedPast.longitude doubleValue];
         NSString *title = [NSString stringWithFormat:@"past%d", parsedPast.pointId];
         
-        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        [annotation setAnchorPoint:CGPointMake(annotation.annotationIcon.size.height, (annotation.annotationIcon.size.width / 2) - 10)];
         
         annotation.userInfo = @"past";
         
@@ -76,7 +77,7 @@
         coord.latitude = (CLLocationDegrees)[parsedMines.longitude doubleValue];
         NSString *title = [NSString stringWithFormat:@"mine"];
         
-        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
+        RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:coord andTitle:title];
         
         annotation.userInfo = @"mine";
         
@@ -93,7 +94,7 @@
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
 {
-    NSLog(@"DANSEN DANSEN DANSE");
+    //NSLog(@"DANSEN DANSEN DANSE");
     if (annotation.isUserLocationAnnotation)
         return nil;
     
@@ -109,7 +110,7 @@
     }
     else if ([annotation.userInfo isEqualToString:@"mine"])
     {
-        marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"mine(icon)"]];
+        marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"mijn(icon)"]];
     }
     
     marker.canShowCallout = YES;
