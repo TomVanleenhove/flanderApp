@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "MeterView.h"
+#import "BadgeView.h"
 @interface SideBarView : UIView
 
 
-@property (nonatomic, strong) UIButton *btnBack;
-@property (nonatomic, assign) SEL PullKnopback2;
+@property (nonatomic, strong) UIButton *btnNuttig;
+@property (nonatomic, assign) SEL PullKnop;
+@property (strong, nonatomic) MeterView *meter;
+@property (strong, nonatomic) BadgeView *badge;
 
 @property (strong, nonatomic) UILabel *lblNaam;
 @property (strong, nonatomic) UILabel *lblDate;

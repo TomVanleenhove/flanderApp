@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MapBoxView.h"
+#import <AFNetworking.h>
 @interface MapBoxViewController : UIViewController
 @property(nonatomic) CGRect bounds;
+
+@property (strong, nonatomic) MapBoxView *view;
 
 
 @property (strong, nonatomic) NSMutableArray *stories;

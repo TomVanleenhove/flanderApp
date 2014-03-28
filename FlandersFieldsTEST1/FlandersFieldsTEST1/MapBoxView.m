@@ -10,11 +10,12 @@
 
 @implementation MapBoxView
 
-- (id)initWithFrame:(CGRect)frame andStories:(NSMutableArray *)stories andStars:(NSMutableArray *)stars andMines:(NSMutableArray *)mines andPasts:(NSMutableArray *)pasts
+- (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        NSLog(@"VIEW %@",self.stories);
         
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hkknk2f2"];
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.875729, 2.899617) zoomLevel: 15 maxZoomLevel:20 minZoomLevel: 10 backgroundImage:[UIImage imageNamed:@"bg"]];
@@ -31,32 +32,16 @@
         [self.mapView addAnnotations:points];
         [self addSubview:self.mapView];
         
-        NSLog(@"[mapview] stories %@",self.stories);
-        NSLog(@"[mapview] stars %@",self.stars);
-        NSLog(@"[mapview] pasts %@",self.pasts);
-        NSLog(@"[mapview] mines %@",self.mines);
         
-        
-        self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *startBtn = [UIImage imageNamed:@"pull"];
-        [self.btnNuttig setBackgroundImage:startBtn forState:normal];
-        [self addSubview:self.btnNuttig];
-        [self.btnNuttig setFrame:CGRectMake(-40, (self.frame.size.height - startBtn.size.height) / 2, startBtn.size.width, startBtn.size.height)];
-        [self.btnNuttig addTarget:self action:@selector(PullKnop:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
+        CGRect bounds = CGRectMake(0, 0, 552, 768);
+        self.sidebar = [[SideBarView alloc] initWithFrame:bounds];
+        [self addSubview:self.sidebar];
     }
     return self;
 }
 
 
-- (void)PullKnop:(id)sender{
-    NSLog(@"[mapboxview] sidebar being tapped");
-    
-    UIView *sidebarView = [[SideBarView alloc] init];
-    [sidebarView setTranslatesAutoresizingMaskIntoConstraints:YES];
-    [self addSubview:sidebarView];
-}
+
 
 
 

@@ -56,7 +56,7 @@
             //NSLog(@"loaded StarPoints");
             self.stars = [NSMutableArray array];
             self.stars = responseObject;
-             NSLog(@"stars %@",self.stars);
+            NSLog(@"stars %@",self.stars);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading StarPoints");
         }];
@@ -64,7 +64,7 @@
             //NSLog(@"loaded minePoints");
             self.mines = [NSMutableArray array];
             self.mines = responseObject;
-             NSLog(@"mines %@",self.mines);
+            NSLog(@"mines %@",self.mines);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading minePoints");
         }];
@@ -72,7 +72,7 @@
             //NSLog(@"loaded pastPoints");
             self.pasts = [NSMutableArray array];
             self.pasts = responseObject;
-             NSLog(@"pasts %@",self.pasts);
+            NSLog(@"pasts %@",self.pasts);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"error loading pastPoints");
         }];
@@ -92,10 +92,7 @@
         [operationPast start];
         [operationStories start];
 
-        
-    }
-    
-
+            }
     
     return self;
 }
@@ -104,7 +101,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.stories = self.stories;
+    NSLog(@"[MapController] %@",self.stories);
+    self.view.stars = self.stars;
+    NSLog(@"[MapController] %@",self.stars);
+    self.view.mines = self.mines;
+    NSLog(@"[MapController] %@",self.mines);
+    self.view.pasts = self.pasts;
+    NSLog(@"[MapController] %@",self.pasts);
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,9 +118,10 @@
 }
 
 - (void)loadView{
+    
     CGRect bounds = CGRectMake(0, 0, 1024, 768);
-    MapBoxView *view = [[MapBoxView alloc] initWithFrame:bounds andStories:self.stories andStars:self.stars andMines:self.mines andPasts:self.pasts];
-    self.view = view;
+    self.view = [[MapBoxView alloc] initWithFrame:bounds];
+    
 }
 
 

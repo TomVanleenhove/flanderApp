@@ -15,9 +15,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-
-        NSLog(@"sidebar added");
+            self.frame = CGRectMake(-self.frame.size.width + 50, 0, self.frame.size.width, self.frame.size.height);
         
+        UITapGestureRecognizer *singleFingerTap =
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+        [self addGestureRecognizer:singleFingerTap];
+        //[singleFingerTap release];
+        
+        CGRect badgeBounds = CGRectMake(self.frame.size.width - 200, 64, 295,1281);
+        self.badge = [[BadgeView alloc] initWithFrame:badgeBounds];
+        [self addSubview:self.badge];
         
         UIImage *bg = [UIImage imageNamed:@"interfacebg"];
         UIImageView *bgview = [[UIImageView alloc] initWithImage:bg];
@@ -65,10 +72,6 @@
         self.txtInfo.font = [UIFont fontWithName:@"aleo" size:20];
         [self addSubview:self.txtInfo];
         
-        
-        
-        
-        
         [UIView beginAnimations:@"bucketsOff" context:nil];
         [UIView setAnimationDuration:0.4];
         [UIView setAnimationDelegate:self];
@@ -78,20 +81,43 @@
         //animate off screen
         [UIView commitAnimations];
         
+        self.btnNuttig = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *startBtn = [UIImage imageNamed:@"pull"];
+        [self.btnNuttig setBackgroundImage:startBtn forState:normal];
+        [self addSubview:self.btnNuttig];
+        [self.btnNuttig setFrame:CGRectMake(self.frame.size.width -65, (self.frame.size.height - startBtn.size.height) / 2, startBtn.size.width, startBtn.size.height)];
+        [self.btnNuttig addTarget:self action:@selector(PullKnop:) forControlEvents:UIControlEventTouchUpInside];
+        
+        CGRect meterBounds = CGRectMake(self.frame.size.width -70, 0, 133,1536);
+        self.meter = [[MeterView alloc] initWithFrame:meterBounds];
+        self.meter.userInteractionEnabled = NO;
+        [self addSubview:self.meter];
+        
         
     }
     return self;
 }
 
 
-- (void)PullKnop2:(id)sender{
+- (void)PullKnop:(id)sender{
     NSLog(@"[mapboxview] sidebar being tapped");
     
-    
-    
+    [UIView animateWithDuration:0.5f animations:^ {
+        self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        self.badge.frame = CGRectMake(self.frame.size.width - 40, 64, 295,1281);
+        self.btnNuttig.alpha = 0;
+    }];
 }
 
-
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+    
+    [UIView animateWithDuration:0.5f animations:^ {
+        self.frame = CGRectMake(-self.frame.size.width + 50, 0, self.frame.size.width, self.frame.size.height);
+        self.badge.frame = CGRectMake(self.frame.size.width - 200, 64, 295,1281);
+        self.btnNuttig.alpha = 1;
+    }];
+    //Do stuff here...
+}
 
 
 /*

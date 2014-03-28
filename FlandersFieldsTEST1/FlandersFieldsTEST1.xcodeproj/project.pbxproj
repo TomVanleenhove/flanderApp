@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		03B61A9E599E4F1C9571BC1A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE04679DB134EF0ABD1C219 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		778CA90E18E4C99A0057C631 /* MeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA90D18E4C99A0057C631 /* MeterView.m */; };
+		778CA91118E4E5240057C631 /* BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA91018E4E5240057C631 /* BadgeView.m */; };
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
-		83945BC918E1CCC900C0837E /* SideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC818E1CCC900C0837E /* SideBarViewController.m */; };
 		83D88D4718E479DD007BCC55 /* governor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4618E479DD007BCC55 /* governor.ttf */; };
 		83D88D4A18E485F6007BCC55 /* aleo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4918E485F6007BCC55 /* aleo.otf */; };
 		83D88D4C18E48782007BCC55 /* AWConquerorSlab-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */; };
@@ -45,14 +46,16 @@
 /* Begin PBXFileReference section */
 		2134299DD9864F9B961F9961 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		2CE04679DB134EF0ABD1C219 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		778CA90C18E4C99A0057C631 /* MeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterView.h; sourceTree = "<group>"; };
+		778CA90D18E4C99A0057C631 /* MeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterView.m; sourceTree = "<group>"; };
+		778CA90F18E4E5240057C631 /* BadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeView.h; sourceTree = "<group>"; };
+		778CA91018E4E5240057C631 /* BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeView.m; sourceTree = "<group>"; };
 		83945BBE18E1BAE600C0837E /* MapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxViewController.h; sourceTree = "<group>"; };
 		83945BBF18E1BAE600C0837E /* MapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxViewController.m; sourceTree = "<group>"; };
 		83945BC118E1BAFB00C0837E /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
 		83945BC218E1BAFB00C0837E /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		83945BC418E1CCBC00C0837E /* SideBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarView.h; sourceTree = "<group>"; };
 		83945BC518E1CCBC00C0837E /* SideBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarView.m; sourceTree = "<group>"; };
-		83945BC718E1CCC900C0837E /* SideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarViewController.h; sourceTree = "<group>"; };
-		83945BC818E1CCC900C0837E /* SideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarViewController.m; sourceTree = "<group>"; };
 		83D88D4618E479DD007BCC55 /* governor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = governor.ttf; sourceTree = "<group>"; };
 		83D88D4918E485F6007BCC55 /* aleo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aleo.otf; sourceTree = "<group>"; };
 		83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AWConquerorSlab-Light.otf"; sourceTree = "<group>"; };
@@ -140,10 +143,12 @@
 		83DED83118E21BE4008B88D4 /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
-				83945BC718E1CCC900C0837E /* SideBarViewController.h */,
-				83945BC818E1CCC900C0837E /* SideBarViewController.m */,
 				83945BC418E1CCBC00C0837E /* SideBarView.h */,
 				83945BC518E1CCBC00C0837E /* SideBarView.m */,
+				778CA90C18E4C99A0057C631 /* MeterView.h */,
+				778CA90D18E4C99A0057C631 /* MeterView.m */,
+				778CA90F18E4E5240057C631 /* BadgeView.h */,
+				778CA91018E4E5240057C631 /* BadgeView.m */,
 			);
 			name = SideBar;
 			sourceTree = "<group>";
@@ -364,10 +369,11 @@
 				83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */,
 				83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */,
 				83F7ED9C18E1B8D900D8A069 /* AppDelegate.m in Sources */,
-				83945BC918E1CCC900C0837E /* SideBarViewController.m in Sources */,
 				83F7ED9818E1B8D900D8A069 /* main.m in Sources */,
+				778CA91118E4E5240057C631 /* BadgeView.m in Sources */,
 				83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */,
 				83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */,
+				778CA90E18E4C99A0057C631 /* MeterView.m in Sources */,
 				83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
