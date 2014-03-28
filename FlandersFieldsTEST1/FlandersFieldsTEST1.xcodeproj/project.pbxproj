@@ -12,6 +12,8 @@
 		778CA91118E4E5240057C631 /* BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA91018E4E5240057C631 /* BadgeView.m */; };
 		778CA91418E501990057C631 /* AnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA91318E501990057C631 /* AnnotationPoint.m */; };
 		778CA91718E502DA0057C631 /* AnnotationPointFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA91618E502DA0057C631 /* AnnotationPointFactory.m */; };
+		778CA92218E5AEBC0057C631 /* StoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA92118E5AEBC0057C631 /* StoryFactory.m */; };
+		778CA92518E5AF7A0057C631 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 778CA92418E5AF7A0057C631 /* Story.m */; };
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
@@ -57,6 +59,10 @@
 		778CA91A18E57BC10057C631 /* Aleo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Aleo-Regular.otf"; path = "fonts/Aleo-Regular.otf"; sourceTree = "<group>"; };
 		778CA91B18E57BC20057C631 /* AWConquerorSlab-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AWConquerorSlab-Light.otf"; path = "fonts/AWConquerorSlab-Light.otf"; sourceTree = "<group>"; };
 		778CA91C18E57BC20057C631 /* governor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = governor.ttf; path = fonts/governor.ttf; sourceTree = "<group>"; };
+		778CA92018E5AEBC0057C631 /* StoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryFactory.h; sourceTree = "<group>"; };
+		778CA92118E5AEBC0057C631 /* StoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryFactory.m; sourceTree = "<group>"; };
+		778CA92318E5AF7A0057C631 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		778CA92418E5AF7A0057C631 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		83945BBE18E1BAE600C0837E /* MapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxViewController.h; sourceTree = "<group>"; };
 		83945BBF18E1BAE600C0837E /* MapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxViewController.m; sourceTree = "<group>"; };
 		83945BC118E1BAFB00C0837E /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 				778CA90D18E4C99A0057C631 /* MeterView.m */,
 				778CA90F18E4E5240057C631 /* BadgeView.h */,
 				778CA91018E4E5240057C631 /* BadgeView.m */,
+				778CA91218E501990057C631 /* AnnotationPoint.h */,
+				778CA91318E501990057C631 /* AnnotationPoint.m */,
+				778CA91518E502DA0057C631 /* AnnotationPointFactory.h */,
+				778CA91618E502DA0057C631 /* AnnotationPointFactory.m */,
 			);
 			name = SideBar;
 			sourceTree = "<group>";
@@ -204,10 +214,10 @@
 				83DED82F18E21BC5008B88D4 /* start */,
 				83DED83018E21BD4008B88D4 /* Mapbox */,
 				83DED83118E21BE4008B88D4 /* SideBar */,
-				778CA91218E501990057C631 /* AnnotationPoint.h */,
-				778CA91318E501990057C631 /* AnnotationPoint.m */,
-				778CA91518E502DA0057C631 /* AnnotationPointFactory.h */,
-				778CA91618E502DA0057C631 /* AnnotationPointFactory.m */,
+				778CA92018E5AEBC0057C631 /* StoryFactory.h */,
+				778CA92118E5AEBC0057C631 /* StoryFactory.m */,
+				778CA92318E5AF7A0057C631 /* Story.h */,
+				778CA92418E5AF7A0057C631 /* Story.m */,
 			);
 			path = FlandersFieldsTEST1;
 			sourceTree = "<group>";
@@ -378,6 +388,7 @@
 				83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */,
 				83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */,
 				83F7ED9C18E1B8D900D8A069 /* AppDelegate.m in Sources */,
+				778CA92518E5AF7A0057C631 /* Story.m in Sources */,
 				83F7ED9818E1B8D900D8A069 /* main.m in Sources */,
 				778CA91118E4E5240057C631 /* BadgeView.m in Sources */,
 				83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */,
@@ -385,6 +396,7 @@
 				778CA91418E501990057C631 /* AnnotationPoint.m in Sources */,
 				778CA90E18E4C99A0057C631 /* MeterView.m in Sources */,
 				83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */,
+				778CA92218E5AEBC0057C631 /* StoryFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

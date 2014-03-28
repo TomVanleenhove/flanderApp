@@ -88,21 +88,21 @@
         annotation.userInfo = @"mine";
         
         [self.mapView addAnnotation:annotation];
-        
-        
     }
 
 }
 
 
-/*- (void)setStories:(NSMutableArray *)newStories {
-    self.stories = newStories;
-}*/
-
+- (void)setStories:(NSMutableArray *)newStories {
+    self.sidebar.Stories = [NSMutableArray array];
+    for (NSDictionary *story in newStories) {
+        Story *parsedStory = [StoryFactory createStoriesFromDictionary:story];
+        [self.sidebar.Stories addObject:parsedStory];
+    }
+}
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
 {
-    //NSLog(@"DANSEN DANSEN DANSE");
     if (annotation.isUserLocationAnnotation)
         return nil;
     
@@ -133,14 +133,19 @@
     NSLog(@"%@",annotation.title);
     if([annotation.title  isEqual: @"Heldendaad 1"]){
         [self.sidebar.badge showBadge:1];
+        self.sidebar.currentStory = self.sidebar.Stories[0];
     }else if ([annotation.title  isEqual: @"Heldendaad 2"]){
         [self.sidebar.badge showBadge:2];
+        self.sidebar.currentStory = self.sidebar.Stories[1];
     }else if ([annotation.title  isEqual: @"Heldendaad 3"]){
         [self.sidebar.badge showBadge:3];
+        self.sidebar.currentStory = self.sidebar.Stories[2];
     }else if ([annotation.title  isEqual: @"Heldendaad 4"]){
         [self.sidebar.badge showBadge:4];
+        self.sidebar.currentStory = self.sidebar.Stories[3];
     }else if ([annotation.title  isEqual: @"Heldendaad 5"]){
         [self.sidebar.badge showBadge:5];
+        self.sidebar.currentStory = self.sidebar.Stories[4];
     }
 }
 

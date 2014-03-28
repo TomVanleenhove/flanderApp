@@ -17,6 +17,8 @@
 #import <RMMarker.h>
 #import "AnnotationPoint.h"
 #import "AnnotationPointFactory.h"
+#import "Story.h"
+#import "StoryFactory.h"
 #import <CoreLocation/CoreLocation.h>
 
 

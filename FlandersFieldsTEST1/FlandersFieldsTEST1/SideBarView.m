@@ -36,10 +36,10 @@
         [bgview setCenter:CGPointMake((bgview.frame.size.width / 2)-5, bgview.frame.size.height / 2)];
         [self addSubview:bgview];
         
-        UIImage *headerbg = [UIImage imageNamed:@"james"];
-        UIImageView *headerbgViewAndre = [[UIImageView alloc] initWithImage:headerbg];
-        [headerbgViewAndre setCenter:CGPointMake((bgview.frame.size.width / 2)-5, 60)];
-        [self addSubview:headerbgViewAndre];
+        self.headerbg = [UIImage imageNamed:@"james"];
+        self.headerbgView = [[UIImageView alloc] initWithImage:self.headerbg];
+        [self.headerbgView setCenter:CGPointMake((bgview.frame.size.width / 2)-5, 60)];
+        [self addSubview:self.headerbgView];
 
         
         UIImage *labelinfobg = [UIImage imageNamed:@"labelinfobg"];
@@ -51,7 +51,6 @@
         self.lblNaam.textAlignment = NSTextAlignmentCenter;
         //RGB(254, 198, 112)
         self.lblNaam.textColor = [UIColor colorWithRed:254 green:198 blue:112 alpha:1];
-        self.lblNaam.text = @"Andre Mare";
         self.lblNaam.center = CGPointMake(bgview.frame.size.width/2, 185);
         self.lblNaam.font = [UIFont fontWithName:@"Governor" size:40];
         self.lblNaam.shadowColor = [UIColor blackColor];
@@ -62,7 +61,6 @@
         self.lblDate.textAlignment = NSTextAlignmentCenter;
         //RGB(254, 198, 112)
         self.lblDate.textColor = [UIColor brownColor];
-        self.lblDate.text = @" (1885 - 1932)";
         self.lblDate.center = CGPointMake(bgview.frame.size.width/2 - 10, 237);
         self.lblDate.alpha = 0.8    ;
         self.lblDate.font = [UIFont fontWithName:@"AWConquerorSlab-Light" size:20];
@@ -72,7 +70,6 @@
         self.lblInfo.textAlignment = NSTextAlignmentLeft;
         self.lblInfo.textColor = [UIColor brownColor];
         self.lblInfo.numberOfLines = 0;
-        self.lblInfo.text = @"André Mare is geboren in Argentan (Frankrijk) op 31 januari 1885. Hij 	toont al vroeg talent voor het tekenen en gaat dan ook toegepaste kunst en tekenen studeren in Parijs. Daar deelt hij een atelier met Fernand Léger op Montparnasse. Hij ontwerpt meubels, maar tekent en schildert ook. Hij stelt verschillende malen tentoon en vanaf 1912 gaat hij in zijn ontwerpen de kubistische toer op. Wanneer de oorlog uitbreekt, wordt hij wederopgeroepen en vertrekt als artillerist. Hij houdt een boekje bij waarin hij schrijft, tekent en schildert. In 1915 maakt hij het zware offensief in de Champagne mee.";
         self.lblInfo.center = CGPointMake(bgview.frame.size.width/2 - 10, 437);
         self.lblInfo.alpha = 0.8;
         self.lblInfo.font = [UIFont fontWithName:@"Aleo-Regular" size:17];
@@ -118,13 +115,19 @@
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
-    
     [UIView animateWithDuration:0.5f animations:^ {
         self.frame = CGRectMake(-self.frame.size.width + 50, 0, self.frame.size.width, self.frame.size.height);
         self.badge.frame = CGRectMake(self.frame.size.width - 200, 64, 295,1281);
         self.btnNuttig.alpha = 1;
     }];
-    //Do stuff here...
+}
+- (void)setCurrentStory:(Story *)currentStory{
+    self.lblNaam.text = currentStory.title;
+    self.lblDate.text = currentStory.lifetime;
+    self.lblInfo.text = currentStory.text;
+    
+    self.headerbg = [UIImage imageNamed:currentStory.H_Pic];
+    self.headerbgView.image = self.headerbg;
 }
 
 

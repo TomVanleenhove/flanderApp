@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
         UIImage *meter = [UIImage imageNamed:@"meter(vol)"];
         UIImageView *meterview = [[UIImageView alloc] initWithImage:meter];
         [meterview setCenter:CGPointMake((meterview.frame.size.width / 2)-5, meterview.frame.size.height / 2)];
@@ -26,6 +27,7 @@
         UIImageView *meterEmptyView = [[UIImageView alloc] initWithImage:meterEmpty];
         [meterEmptyView setCenter:CGPointMake((meterEmptyView.frame.size.width / 2)-5, meterEmptyView.frame.size.height / 2)];
         [self addSubview:meterEmptyView];
+
     }
     return self;
 }
