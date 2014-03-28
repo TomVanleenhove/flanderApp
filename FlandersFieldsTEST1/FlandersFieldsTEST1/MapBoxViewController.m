@@ -19,12 +19,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        /*self.view.alpha = 0;
+        self.view.alpha = 0;
         
         [UIView beginAnimations:@"fade in" context:nil];
-        [UIView setAnimationDuration:3.0];
+        [UIView setAnimationDuration:0.9];
         self.view.alpha = 1;
-        [UIView commitAnimations];*/
+        [UIView commitAnimations];
         
         NSString *pathStars = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/checkpoints/getStars";
         NSString *pathMinens = @"http://student.howest.be/tom.vanleenhove/20132014/MAIV/api/checkpoints/getMines";

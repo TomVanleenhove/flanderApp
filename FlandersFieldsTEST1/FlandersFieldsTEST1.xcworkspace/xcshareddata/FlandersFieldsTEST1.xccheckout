@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CBB06E8E-82FF-45BD-9FE7-6E194E57B670</string>
+	<string>825966CB-8FC6-4F7B-BECB-9297A9B6C0A1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>FlandersFieldsTEST1</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AA39ABB9-3A83-4BD7-87AD-343A562790C1</key>
-		<string>https://github.com/TomVanleenhove/flanderApp.git</string>
+		<key>547B5511-0008-4561-99B9-6D362CFDA98F</key>
+		<string>https://github.com/TomVanleenhove/flanderApp</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FlandersFieldsTEST1/FlandersFieldsTEST1.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AA39ABB9-3A83-4BD7-87AD-343A562790C1</key>
+		<key>547B5511-0008-4561-99B9-6D362CFDA98F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/TomVanleenhove/flanderApp.git</string>
+	<string>https://github.com/TomVanleenhove/flanderApp</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AA39ABB9-3A83-4BD7-87AD-343A562790C1</string>
+	<string>547B5511-0008-4561-99B9-6D362CFDA98F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AA39ABB9-3A83-4BD7-87AD-343A562790C1</string>
+			<string>547B5511-0008-4561-99B9-6D362CFDA98F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>flanderApp</string>
 		</dict>

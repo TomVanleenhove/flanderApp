@@ -20,9 +20,12 @@
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"renaatst.hkknk2f2"];
         self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.875729, 2.899617) zoomLevel: 15 maxZoomLevel:20 minZoomLevel: 10 backgroundImage:[UIImage imageNamed:@"bg"]];
         
+        self.mapView.zoom = 14;
         self.mapView.delegate = self;
         
+        
         [self addSubview:self.mapView];
+        
         
         CGRect bounds = CGRectMake(0, 0, 552, 768);
         self.sidebar = [[SideBarView alloc] initWithFrame:bounds];
@@ -86,6 +89,7 @@
 /*- (void)setStories:(NSMutableArray *)newStories {
     self.stories = newStories;
 }*/
+
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
 {

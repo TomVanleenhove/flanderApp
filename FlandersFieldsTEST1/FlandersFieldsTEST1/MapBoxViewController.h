@@ -19,4 +19,8 @@
 @property (strong, nonatomic) NSMutableArray *stars;
 @property (strong, nonatomic) NSMutableArray *mines;
 @property (strong, nonatomic) NSMutableArray *pasts;
+
+
+
+
 @end

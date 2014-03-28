@@ -15,6 +15,7 @@
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
+		83C8F35318E535E5009FF591 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 83C8F35218E535E5009FF591 /* test.mp4 */; };
 		83D88D4718E479DD007BCC55 /* governor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4618E479DD007BCC55 /* governor.ttf */; };
 		83D88D4A18E485F6007BCC55 /* aleo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4918E485F6007BCC55 /* aleo.otf */; };
 		83D88D4C18E48782007BCC55 /* AWConquerorSlab-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */; };
@@ -62,6 +63,7 @@
 		83945BC218E1BAFB00C0837E /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		83945BC418E1CCBC00C0837E /* SideBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarView.h; sourceTree = "<group>"; };
 		83945BC518E1CCBC00C0837E /* SideBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarView.m; sourceTree = "<group>"; };
+		83C8F35218E535E5009FF591 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mp4; path = ../../../../../../../Movies/Diversen/test.mp4; sourceTree = "<group>"; };
 		83D88D4618E479DD007BCC55 /* governor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = governor.ttf; sourceTree = "<group>"; };
 		83D88D4918E485F6007BCC55 /* aleo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aleo.otf; sourceTree = "<group>"; };
 		83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AWConquerorSlab-Light.otf"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				83D88D4B18E48782007BCC55 /* AWConquerorSlab-Light.otf */,
 				83D88D4918E485F6007BCC55 /* aleo.otf */,
+				83C8F35218E535E5009FF591 /* test.mp4 */,
 				83D88D4618E479DD007BCC55 /* governor.ttf */,
 			);
 			name = Resources;
@@ -322,6 +325,7 @@
 			files = (
 				83D88D4C18E48782007BCC55 /* AWConquerorSlab-Light.otf in Resources */,
 				83F7ED9618E1B8D900D8A069 /* InfoPlist.strings in Resources */,
+				83C8F35318E535E5009FF591 /* test.mp4 in Resources */,
 				83D88D4718E479DD007BCC55 /* governor.ttf in Resources */,
 				83F7ED9E18E1B8D900D8A069 /* Images.xcassets in Resources */,
 				83D88D4A18E485F6007BCC55 /* aleo.otf in Resources */,
