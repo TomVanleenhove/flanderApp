@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) UILabel *lblNaam;
 @property (strong, nonatomic) UILabel *lblDate;
-@property (strong, nonatomic) UITextField *txtInfo;
+@property (strong, nonatomic) UILabel *lblInfo;
 
 
 
