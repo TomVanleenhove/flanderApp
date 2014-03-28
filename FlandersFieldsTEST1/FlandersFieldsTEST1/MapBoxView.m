@@ -109,10 +109,12 @@
     if ([annotation.userInfo isEqualToString:@"star"])
     {
         marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"star(icon)"]];
+        marker.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeContactAdd];
     }
     else if ([annotation.userInfo isEqualToString:@"past"])
     {
         marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"past(icon)"]];
+        marker.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     else if ([annotation.userInfo isEqualToString:@"mine"])
     {
@@ -124,7 +126,21 @@
     return marker;
 }
 
-
+- (void)tapOnCalloutAccessoryControl:(UIControl *)control forAnnotation:(RMAnnotation *)annotation onMap:(RMMapView *)map
+{
+    NSLog(@"%@",annotation.title);
+    if([annotation.title  isEqual: @"Heldendaad 1"]){
+        [self.sidebar.badge showBadge:1];
+    }else if ([annotation.title  isEqual: @"Heldendaad 2"]){
+        [self.sidebar.badge showBadge:2];
+    }else if ([annotation.title  isEqual: @"Heldendaad 3"]){
+        [self.sidebar.badge showBadge:3];
+    }else if ([annotation.title  isEqual: @"Heldendaad 4"]){
+        [self.sidebar.badge showBadge:4];
+    }else if ([annotation.title  isEqual: @"Heldendaad 5"]){
+        [self.sidebar.badge showBadge:5];
+    }
+}
 
 
 
