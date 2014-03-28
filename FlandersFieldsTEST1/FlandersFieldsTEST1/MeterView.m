@@ -19,6 +19,9 @@
         UIImageView *meterview = [[UIImageView alloc] initWithImage:meter];
         [meterview setCenter:CGPointMake((meterview.frame.size.width / 2)-5, meterview.frame.size.height / 2)];
         [self addSubview:meterview];
+        
+        
+        
         UIImage *meterEmpty = [UIImage imageNamed:@"meter(leeg)"];
         UIImageView *meterEmptyView = [[UIImageView alloc] initWithImage:meterEmpty];
         [meterEmptyView setCenter:CGPointMake((meterEmptyView.frame.size.width / 2)-5, meterEmptyView.frame.size.height / 2)];

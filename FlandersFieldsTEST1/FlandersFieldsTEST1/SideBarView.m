@@ -100,6 +100,8 @@
         [self addSubview:self.meter];
         
         
+        
+        
     }
     return self;
 }
