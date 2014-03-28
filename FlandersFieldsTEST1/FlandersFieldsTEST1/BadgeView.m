@@ -20,6 +20,7 @@
         [sliderview setCenter:CGPointMake((sliderview.frame.size.width / 2)-5, sliderview.frame.size.height / 2)];
         [self addSubview:sliderview];
         
+        
         UIImage *badge1 = [UIImage imageNamed:@"badge1"];
         self.badge1View = [[UIImageView alloc] initWithImage:badge1];
         [self.badge1View setCenter:CGPointMake((self.badge1View.frame.size.width / 2)-5, self.badge1View.frame.size.height / 2)];
@@ -61,8 +62,6 @@
             [UIImageView animateWithDuration:0.5f animations:^ {
                 self.badge1View.alpha = 1;
             }];
-            
-            
         }
             break;
         case 2:
