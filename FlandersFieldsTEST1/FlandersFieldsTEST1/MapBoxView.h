@@ -17,10 +17,14 @@
 #import <RMMarker.h>
 #import "AnnotationPoint.h"
 #import "AnnotationPointFactory.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 
 
 @interface MapBoxView : UIView<RMMapViewDelegate>
+
+
 
 @property (strong, nonatomic) RMMapView *mapView;
 

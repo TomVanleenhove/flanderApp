@@ -15,6 +15,7 @@
 		83945BC018E1BAE600C0837E /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BBF18E1BAE600C0837E /* MapBoxViewController.m */; };
 		83945BC318E1BAFB00C0837E /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC218E1BAFB00C0837E /* MapBoxView.m */; };
 		83945BC618E1CCBC00C0837E /* SideBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83945BC518E1CCBC00C0837E /* SideBarView.m */; };
+		83CEE51518E587B400AC64C9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEE51418E587B400AC64C9 /* CoreLocation.framework */; };
 		83DED82B18E21BA3008B88D4 /* StartschermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82A18E21BA3008B88D4 /* StartschermViewController.m */; };
 		83DED82E18E21BBF008B88D4 /* StartSchermView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DED82D18E21BBF008B88D4 /* StartSchermView.m */; };
 		83DED83318E30C33008B88D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DED83218E30C33008B88D4 /* MediaPlayer.framework */; };
@@ -62,6 +63,7 @@
 		83945BC218E1BAFB00C0837E /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		83945BC418E1CCBC00C0837E /* SideBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarView.h; sourceTree = "<group>"; };
 		83945BC518E1CCBC00C0837E /* SideBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarView.m; sourceTree = "<group>"; };
+		83CEE51418E587B400AC64C9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83DED82918E21BA3008B88D4 /* StartschermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartschermViewController.h; sourceTree = "<group>"; };
 		83DED82A18E21BA3008B88D4 /* StartschermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartschermViewController.m; sourceTree = "<group>"; };
 		83DED82C18E21BBF008B88D4 /* StartSchermView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartSchermView.h; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CEE51518E587B400AC64C9 /* CoreLocation.framework in Frameworks */,
 				83DED83318E30C33008B88D4 /* MediaPlayer.framework in Frameworks */,
 				83F7ED8E18E1B8D900D8A069 /* CoreGraphics.framework in Frameworks */,
 				83F7ED9018E1B8D900D8A069 /* UIKit.framework in Frameworks */,
@@ -179,6 +182,7 @@
 		83F7ED8A18E1B8D900D8A069 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83CEE51418E587B400AC64C9 /* CoreLocation.framework */,
 				83DED83218E30C33008B88D4 /* MediaPlayer.framework */,
 				83F7ED8B18E1B8D900D8A069 /* Foundation.framework */,
 				83F7ED8D18E1B8D900D8A069 /* CoreGraphics.framework */,

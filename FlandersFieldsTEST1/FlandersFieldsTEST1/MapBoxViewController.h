@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "MapBoxView.h"
-#import <AFNetworking.h>
+#import <AFNetworking.h>/*
+#import <CoreLocation/CoreLocation.h>
+@interface MapBoxViewController : UIViewController*/
+
+#import<CoreLocation/CoreLocation.h>
 @interface MapBoxViewController : UIViewController
+@property (nonatomic, retain) CLLocationManager *locManager;
+
+
 @property(nonatomic) CGRect bounds;
 
 @property (strong, nonatomic) MapBoxView *view;

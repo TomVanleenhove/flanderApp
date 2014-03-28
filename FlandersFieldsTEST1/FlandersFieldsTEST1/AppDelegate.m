@@ -20,6 +20,7 @@
     self.window.rootViewController = startSchermVC;
     
     
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

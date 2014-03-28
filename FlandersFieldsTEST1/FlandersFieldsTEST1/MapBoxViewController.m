@@ -110,7 +110,11 @@
     CGRect bounds = CGRectMake(0, 0, 1024, 768);
     self.view = [[MapBoxView alloc] initWithFrame:bounds];
     
+    
+    
 }
+
+
 
 
 

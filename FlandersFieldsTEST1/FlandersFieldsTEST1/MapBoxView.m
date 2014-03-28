@@ -30,6 +30,12 @@
         CGRect bounds = CGRectMake(0, 0, 552, 768);
         self.sidebar = [[SideBarView alloc] initWithFrame:bounds];
         [self addSubview:self.sidebar];
+        
+        self.mapView.showsUserLocation = YES;
+        self.mapView.userInteractionEnabled = YES;
+        
+        
+        
     }
     return self;
 }
@@ -117,6 +123,11 @@
     
     return marker;
 }
+
+
+
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
