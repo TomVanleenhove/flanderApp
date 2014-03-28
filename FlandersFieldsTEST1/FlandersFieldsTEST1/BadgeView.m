@@ -61,6 +61,8 @@
             [UIImageView animateWithDuration:0.5f animations:^ {
                 self.badge1View.alpha = 1;
             }];
+            
+            
         }
             break;
         case 2:
