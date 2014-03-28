@@ -31,7 +31,7 @@
         [bgview setCenter:CGPointMake((bgview.frame.size.width / 2)-5, bgview.frame.size.height / 2)];
         [self addSubview:bgview];
         
-        UIImage *headerbg = [UIImage imageNamed:@"headerbgAndre"];
+        UIImage *headerbg = [UIImage imageNamed:@"james"];
         UIImageView *headerbgViewAndre = [[UIImageView alloc] initWithImage:headerbg];
         [headerbgViewAndre setCenter:CGPointMake((bgview.frame.size.width / 2)-5, 60)];
         [self addSubview:headerbgViewAndre];
