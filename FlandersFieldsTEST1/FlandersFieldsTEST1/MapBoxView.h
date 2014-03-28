@@ -32,13 +32,12 @@
 
 @property (strong, nonatomic) SideBarView *sidebar;
 
-
-
 @property (strong, nonatomic) NSMutableArray *stories;
 @property (strong, nonatomic) NSMutableArray *stars;
 @property (strong, nonatomic) NSMutableArray *mines;
 @property (strong, nonatomic) NSMutableArray *pasts;
 @property (strong, nonatomic) RMAnnotation *annotation;
+@property (nonatomic) int badges;
 
 
 @end

@@ -147,6 +147,9 @@
         [self.sidebar.badge showBadge:5];
         self.sidebar.currentStory = self.sidebar.Stories[4];
     }
+    
+    self.badges ++;
+    [self.sidebar.meter showMeter:self.badges];
 }
 
 

@@ -24,13 +24,28 @@
         
         
         UIImage *meterEmpty = [UIImage imageNamed:@"meter(leeg)"];
-        UIImageView *meterEmptyView = [[UIImageView alloc] initWithImage:meterEmpty];
-        [meterEmptyView setCenter:CGPointMake((meterEmptyView.frame.size.width / 2)-5, meterEmptyView.frame.size.height / 2)];
-        [self addSubview:meterEmptyView];
-
+        self.meterEmptyView = [[UIImageView alloc] initWithImage:meterEmpty];
+        [self.meterEmptyView setCenter:CGPointMake((self.meterEmptyView.frame.size.width / 2)-5, self.meterEmptyView.frame.size.height / 2)];
+        [self addSubview:self.meterEmptyView];
+       
+        self.mask = [CALayer layer];
+        self.mask.contents = (id)[[UIImage imageNamed:@"interfacebg"] CGImage];
+        self.mask.frame = CGRectMake(0, 0, meterEmpty.size.width, meterEmpty.size.height);
+        self.meterEmptyView.layer.mask = self.mask;
+        
+        [self.meterEmptyView.layer setMasksToBounds:YES];
+        
     }
     return self;
 }
+-(void)showMeter:(int)badge{
+        [UIImageView animateWithDuration:0.9f animations:^ {
+            self.mask.frame = CGRectMake(0, 0, self.meterEmptyView.frame.size.width, self.meterEmptyView.frame.size.height - ((self.meterEmptyView.frame.size.height / 5)*badge));
+
+        }];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

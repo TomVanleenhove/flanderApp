@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MeterView : UIView
+@property (strong, nonatomic) CALayer *mask;
+@property (strong, nonatomic) UIImageView *meterEmptyView;
 
+-(void)showMeter:(int)badge;
 @end
