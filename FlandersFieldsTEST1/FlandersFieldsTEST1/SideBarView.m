@@ -22,6 +22,11 @@
         [self addGestureRecognizer:singleFingerTap];
         //[singleFingerTap release];
         
+        UISwipeGestureRecognizer *swipeLeft =
+        [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+        [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+        [self addGestureRecognizer:swipeLeft];
+        
         CGRect badgeBounds = CGRectMake(self.frame.size.width - 200, 64, 295,1281);
         self.badge = [[BadgeView alloc] initWithFrame:badgeBounds];
         [self addSubview:self.badge];
